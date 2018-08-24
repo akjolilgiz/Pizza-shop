@@ -1,24 +1,31 @@
 // // Business logic
-// var Pizza = {size, toppings};
-//
+function Pizza(size, toppings) {
+  this.size = size;
+  this.toppings = toppings;
+}
 
-
-//User Interface
 $(document).ready(function() {
-
   $("form#orderPizza").submit(function(event) {
     event.preventDefault();
 
-    var clientName = $("input#client-name").val();
-    var sizeOfPizza = $("#sizePicked").val();
-    $("input:checkbox[name=toppingsPicked]:checked").each(function(){
-      var toppingsOnPizza = $(this).val();
-    $("#name").text("name:  " + clientName);
-    $("#size").text("size:  " + sizeOfPizza);
-    $("#topping").append(toppingsOnPizza + "<br>");
+    var name = $("input#client-name").val();
+    var size = $("#sizePicked").val();
+    var toppings = [];
+
+ $("input:checkbox[name=toppingsPicked]:checked").each(function(){
+  toppings.push($(this).val());
   });
+    var newPizza = new Pizza (size, toppings);
+    alert(newPizza.toppings);
 
 
-  });
+    $("#name").text("name: " + name);
+    $("#size").text("size: " + size);
 
+    $(".output").append("<li>" + newPizza.toppings + "</li>");
+
+
+
+
+});
 });

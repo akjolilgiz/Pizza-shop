@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>Order Pizza</title>
 </head>
@@ -44,10 +40,9 @@
           <h3>Receipt:</h3>
             <h4 id = "name"></h4>
             <h4 id = "size"></h4>
-            <h4> Toppings: </h4>
-            <ul id = "topping"></ul>
         </div>
       </div>
+      <ul class = "output"></ul>
       <div id="buttons">
         <button id="submit" class="btn btn-danger">Submit My Order!</button>
       </div>
