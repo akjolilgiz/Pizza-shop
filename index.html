@@ -7,7 +7,7 @@
   <script src="js/scripts.js"></script>
   <title>Order Pizza</title>
 </head>
-<body>
+<body background="img/pizza.jpeg">
     <div class="container">
       <h1 class = "jumbotron">Pizza Shop</h1>
       <form id="orderPizza">
@@ -21,10 +21,10 @@
               <label for="client-name">Pick a size:</label>
               <select class="form-control" id="sizePicked">
                 <option></option>
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-                <option>Extra Large</option>
+                <option value = "Small">Small</option>
+                <option value = "Medium">Medium</option>
+                <option value = "Large">Large</option>
+                <option value = "ExtraLarge">Extra Large</option>
               </select>
             </div>
             <div class="form-group">
@@ -36,13 +36,14 @@
               <input type="checkbox" name="toppingsPicked" value="Olives"> Olives.<br>
           </div>
         </div>
-        <div class = "jumbotron col-sm-6">
+        <div class = "receipt col-sm-6">
           <h3>Receipt:</h3>
-            <h4 id = "name"></h4>
-            <h4 id = "size"></h4>
-            <h4 id = "toppings"></h4>
-            <h4 id = "price"></h4>
-            <h4 id = "topPrices"></h4>
+            <h4>name:<span id = "name"></span></h4>
+            <h4>size:<span id = "size"></span></h4>
+            <h4>topping:<span id = "toppings"></span></h4>
+            <h4>price:<span id = "price"></span></h4>
+            <h4>total:<span id = "total"></span></h4>
+
         </div>
       </div>
       <!-- <ul class = "output"></ul> -->
