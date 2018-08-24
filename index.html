@@ -15,17 +15,35 @@
   <div class="container">
     <h1 class = "jumbotron">Pizza Shop</h1>
     <form id="orderPizza">
-      <div class="form-group">
-        <label for="client-name">Name:</label>
-        <input type="text" class="form-control" id="client-name">
+      <div class = "row">
+        <div class = "col-sm-6">
+          <div class="form-group">
+            <label for="client-name">Name:</label>
+            <input type="text" class="form-control" id="client-name">
+          </div>
+          <div class="form-group">
+            <label for="client-name">Pick a size:</label>
+            <select class="form-control" id="sizePicked">
+              <option></option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+              <option>Extra Large</option>
+            </select>
+          </div>
+        </div>
+      <div class = "jumbotron col-sm-6">
+        <h3>Receipt:</h3>
+          <h4 id = "name"></h4>
+          <h4 id = "size"></h4>
       </div>
-    <div id="buttons">
-      <button id="restart" class="btn btn-danger">Submit My Order!</button>
     </div>
-  </form>
-  <div class = "jumbotron receipt">
-  <h3>Receipt:</h3>
+
+    <div id="buttons">
+      <button id="submit" class="btn btn-danger">Submit My Order!</button>
   </div>
+    </form>
+
 </div>
 </body>
 </html>
